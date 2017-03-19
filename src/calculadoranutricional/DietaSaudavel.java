@@ -1,6 +1,6 @@
 package calculadoranutricional;
 
-public class DietaSaudavel {
+public class DietaSaudavel extends Dieta{
    //Paciente paciente = new Paciente();
    
    public double calcularNecessidadesEnergeticasHomem (Paciente paciente){
