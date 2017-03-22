@@ -1,6 +1,6 @@
 package calculadoranutricional;
 
-public class Paciente {
+public class Paciente extends Usuario {
     private int id;
     private int idade;
     private float peso;
@@ -9,6 +9,7 @@ public class Paciente {
     private float imc;
     private float necessidadeEnergetica;
     private int id_nutricionista;
+    private int id_usuario;
     private float naf;
     
     
@@ -90,8 +91,7 @@ public class Paciente {
 
     public void setNecessidadeEnergetica(float necessidadeEnergetica) {
         this.necessidadeEnergetica = necessidadeEnergetica;
-    }
-    
+    }    
     
     
     public float calcularImc(){
@@ -101,4 +101,14 @@ public class Paciente {
     public float calcularPesoIdeal(){
         return 1;
     }
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+    
+    
 }

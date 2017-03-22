@@ -11,32 +11,30 @@ public class ManagerDB {
     private final String SENHA = "";
     
 
-    public ManagerDB() throws IllegalAccessException {
+    public Connection abrirConexao() {
         try {
-           // Class.forName("sun.jdbc.driver.JdbcOdbcDriver");
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ManagerDB.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(ManagerDB.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-    }
-    
-    public ArrayList<Paciente> getAllPacientes(){
-        try {
-            this.con = DriverManager.getConnection(NOMEBANCO, NOMEUSUARIO, SENHA);
-            Statement stmtTodosPacientes = this.con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet result = stmtTodosPacientes.executeQuery("SELECT * FROM usuario WHERE tipo = 1; ");
-            
-            while(result.next()){
-                System.out.println(result.getString("nome"));
-            }
+
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection(NOMEBANCO, NOMEUSUARIO, SENHA);
+            return con;
         } catch (SQLException ex) {
-            Logger.getLogger(ManagerDB.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ManagerDB1.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+             Logger.getLogger(ManagerDB1.class.getName()).log(Level.SEVERE, null, ex);
+
         }
         return null;
     }
 
+    public void fechaConexao() {
+        try {
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerDB1.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(ManagerDB1.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+    }
     
 }
