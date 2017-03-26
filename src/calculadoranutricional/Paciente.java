@@ -1,33 +1,29 @@
 package calculadoranutricional;
 
 public class Paciente extends Usuario {
-    private int id;
+    //private int idPaciente;
+    private int id_usuario;
     private int idade;
     private float peso;
     private float pesoIdeal;
     private float altura;
     private float imc;
     private float necessidadeEnergetica;
-    private int id_nutricionista;
-    private int id_usuario;
+    //private int id_nutricionista;    
     private float naf;
+    private boolean doente; // add
+    private char sexo; // add -será M ou F
+    private int id_dieta; // add
     
-    
-    
-    
-    /*
-    Atributos: id, idade, peso, pesoideal, altura, nutricionista , naf              	
-                                           	Metodos: getters e setters, calcularIMC
-    
-    */
 
-    public int getId() {
-        return id;
+
+    /*public int getIdPaciente() {
+        return idPaciente;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setIdPaciente(int idPaciente) {
+        this.idPaciente = idPaciente;
+    }*/
 
     public int getIdade() {
         return idade;
@@ -69,12 +65,20 @@ public class Paciente extends Usuario {
         this.imc = imc;
     }
 
-    public int getId_nutricionista() {
+   /* public int getId_nutricionista() {
         return id_nutricionista;
     }
 
     public void setId_nutricionista(int id_nutricionista) {
         this.id_nutricionista = id_nutricionista;
+    }*/
+    
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
     public float getNaf() {
@@ -91,23 +95,30 @@ public class Paciente extends Usuario {
 
     public void setNecessidadeEnergetica(float necessidadeEnergetica) {
         this.necessidadeEnergetica = necessidadeEnergetica;
-    }    
-    
-    
-    public float calcularImc(){
-        return 1;
-    }
-    
-    public float calcularPesoIdeal(){
-        return 1;
+    } 
+
+    public boolean isDoente() {
+        return doente;
     }
 
-    public int getId_usuario() {
-        return id_usuario;
+    public void setDoente(boolean doente) {
+        this.doente = doente;
     }
 
-    public void setId_usuario(int id_usuario) {
-        this.id_usuario = id_usuario;
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
+    public int getId_dieta() {
+        return id_dieta;
+    }
+
+    public void setId_dieta(int id_dieta) {
+        this.id_dieta = id_dieta;
     }
     
     

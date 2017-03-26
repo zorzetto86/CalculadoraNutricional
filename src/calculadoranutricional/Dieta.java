@@ -4,14 +4,12 @@ import java.util.ArrayList;
 
 
 public abstract class Dieta {
-    protected int id;    
-    protected ArrayList<Alimentos> desjejum;
+    protected int id;      
+    protected ArrayList<AlimentoDieta> alimentoDieta;
     
     
-    public double calcularNecessidadesEnergeticasHomem(Paciente paciente) {
-        return 0;
-    }
-    public double calcularNecessidadesEnergeticasulher(Paciente paciente){
-        return 0;
-    }
+    public abstract double calcularNecessidadesEnergeticasHomem(Paciente paciente);
+   
+    public abstract double calcularNecessidadesEnergeticasMulher(Paciente paciente);
+   
 }

@@ -1,4 +1,4 @@
-package calculadoranutricional.db;
+package calculadoranutricional.factory;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,9 +18,9 @@ public class ManagerDB {
             con = DriverManager.getConnection(NOMEBANCO, NOMEUSUARIO, SENHA);
             return con;
         } catch (SQLException ex) {
-            Logger.getLogger(ManagerDB1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ManagerDB.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
-             Logger.getLogger(ManagerDB1.class.getName()).log(Level.SEVERE, null, ex);
+             Logger.getLogger(ManagerDB.class.getName()).log(Level.SEVERE, null, ex);
 
         }
         return null;
@@ -30,9 +30,9 @@ public class ManagerDB {
         try {
             con.close();
         } catch (SQLException ex) {
-            Logger.getLogger(ManagerDB1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ManagerDB.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
-            Logger.getLogger(ManagerDB1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ManagerDB.class.getName()).log(Level.SEVERE, null, ex);
 
         }
     }
