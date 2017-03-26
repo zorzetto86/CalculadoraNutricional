@@ -3,7 +3,7 @@ package calculadoranutricional;
 
 public class Alimentos {
    
-  
+   private int id;
    private String nome;
    private int calorias;
    private int proteina;
@@ -14,12 +14,88 @@ public class Alimentos {
    private int colesterol;
    private int fibra;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
    
-    /*
-    Atributos: nome, calorias, proteína, carboidrato, lipídeo, Ferro, Sódio, Cálcio, Colesterol, Fibra
-            	Metodos:
-getters e setters,
-Calcular nutrientes na proporção que foram inseridos. Quantidade por grama será inserida no banco. Ao calcular dieta, somente será inserido o alimento e sua quantidade o programa fará a regra de três com o valor que consta no banco para retornar o valor de nutrientes de acordo com a quantidade inserida.
-    
-    */
+   
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getCalorias() {
+        return calorias;
+    }
+
+    public void setCalorias(int calorias) {
+        this.calorias = calorias;
+    }
+
+    public int getProteina() {
+        return proteina;
+    }
+
+    public void setProteina(int proteina) {
+        this.proteina = proteina;
+    }
+
+    public int getCarboidrato() {
+        return carboidrato;
+    }
+
+    public void setCarboidrato(int carboidrato) {
+        this.carboidrato = carboidrato;
+    }
+
+    public int getLipideo() {
+        return lipideo;
+    }
+
+    public void setLipideo(int lipideo) {
+        this.lipideo = lipideo;
+    }
+
+    public int getFerro() {
+        return ferro;
+    }
+
+    public void setFerro(int ferro) {
+        this.ferro = ferro;
+    }
+
+    public int getSodio() {
+        return sodio;
+    }
+
+    public void setSodio(int sodio) {
+        this.sodio = sodio;
+    }
+
+    public int getColesterol() {
+        return colesterol;
+    }
+
+    public void setColesterol(int colesterol) {
+        this.colesterol = colesterol;
+    }
+
+    public int getFibra() {
+        return fibra;
+    }
+
+    public void setFibra(int fibra) {
+        this.fibra = fibra;
+    }
+
+   
+  
 }
