@@ -1,6 +1,6 @@
 package calculadoranutricional;
 
-import calculadoranutricional.db.ManagerDB;
+
 import calculadoranutricional.db.PacienteDB;
 
 
@@ -9,7 +9,7 @@ public class CalculadoraNutricional {
    
     public static void main(String[] args) {
         
-        //testes
+        //classe para testes
        PacienteDB banco = new PacienteDB();  
         
         Paciente pct = new Paciente();
@@ -19,7 +19,7 @@ public class CalculadoraNutricional {
         pct.setNaf(1);
         pct.setNecessidadeEnergetica(2000);
         pct.setPeso(56);
-        banco.insertPacientes(pct);
+        //banco.insertPacientes(pct);
         
                
         banco.getAllPacientes();
