@@ -1,6 +1,6 @@
 package calculadoranutricional.db;
 
-import calculadoranutricional.factory.ManagerDB;
+import calculadoranutricional.DBManager.ManagerDB;
 import calculadoranutricional.Nutricionista;
 import java.sql.ResultSet;
 import java.sql.SQLException;
