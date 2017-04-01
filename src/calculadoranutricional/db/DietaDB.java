@@ -1,5 +1,6 @@
 package calculadoranutricional.db;
 
+import calculadoranutricional.AlimentoDieta;
 import calculadoranutricional.Nutricionista;
 import calculadoranutricional.DBManager.ManagerDB;
 import java.sql.ResultSet;
@@ -16,5 +17,9 @@ public class DietaDB {
      insert
      update
      delete
+     calcular calorias totais
      */
+     
+      
+     
 }

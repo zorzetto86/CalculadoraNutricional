@@ -84,6 +84,39 @@ public class AlimentoDB {
         return null;
     }
      
+      public Alimentos getAlimento(String nome){        
+        try {
+            Statement stmt = conexao.abrirConexao().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet result = stmt.executeQuery("SELECT * FROM alimentos where nome = " + nome + ";");
+            
+            ArrayList<Alimentos> alimentos = new ArrayList<Alimentos>();
+            
+            
+                Alimentos a = new Alimentos();
+                
+                a.setNome(result.getString("nome"));
+                a.setCalorias(result.getInt("calorias"));
+                a.setProteina(result.getInt("proteina"));
+                a.setCarboidrato(result.getInt("carboidrato"));                
+                a.setLipideo(result.getInt("lipideo"));
+                a.setFerro(result.getInt("ferro"));
+                a.setSodio(result.getInt("sodio"));
+                a.setColesterol(result.getInt("colesterol"));             
+                a.setFibra(result.getInt("fibra"));
+         
+                alimentos.add(a);
+            
+            conexao.fechaConexao();
+            return a;
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerDB.class.getName()).log(Level.SEVERE, null, ex);
+            conexao.fechaConexao();
+        }
+        conexao.fechaConexao();
+        return null;
+    }
+     
+     
       public void editAlimento(String valorAnterior, String novoValor, String coluna){
         String query;
         query = " UPDATE alimentos"
@@ -121,10 +154,5 @@ public class AlimentoDB {
         
     }
     
-    /*
-    insert ok
-     get ok
-    update ok
-    delete
-    */
+   
 }
